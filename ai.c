@@ -6,7 +6,7 @@ void to_polar(double x, double y, double *r, double *theta)
 	const double pi = 3.14159265358979323846;
 
 	*r = sqrt(x * x + y * y);
-	*theta = atan2(y, x) / 180.0 * M_PI;
+	*theta = atan2(y, x) * 180.0 / pi;
 }
 
 int main(void)

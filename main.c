@@ -17,6 +17,6 @@ int main(void)
 void to_polar(double x, double y, double *r, double *theta)
 {
     /* TODO: r と theta をポインタ引数を通じて計算・格納 */
-    *r = sqrt(x * x + y * y);
-    *theta = atan2(y, x) / 180.0 * M_PI;
+	*r = sqrt(x * x + y * y);
+	*theta = atan2(y, x) * 180.0 / M_PI;
 }
