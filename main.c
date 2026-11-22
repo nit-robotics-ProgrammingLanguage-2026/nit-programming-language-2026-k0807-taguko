@@ -9,7 +9,7 @@ int main(void)
     double r, theta;
     scanf("%lf %lf", &x, &y);
     /* TODO: to_polar を呼び出す */
-
+    to_polar(x, y, &r, &theta);
     printf("%.3f,%.2f", r, theta);
     return 0;
 }
@@ -17,4 +17,6 @@ int main(void)
 void to_polar(double x, double y, double *r, double *theta)
 {
     /* TODO: r と theta をポインタ引数を通じて計算・格納 */
+    *r = sqrt(x * x + y * y);
+    *theta = atan2(y, x) / 180.0 * M_PI;
 }
